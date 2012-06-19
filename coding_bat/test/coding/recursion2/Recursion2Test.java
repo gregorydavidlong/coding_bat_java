@@ -69,5 +69,24 @@ public class Recursion2Test {
 		assertFalse(Recursion2.groupSum6(0, nums, 4));
 		assertFalse(Recursion2.groupSum6(1, nums, 1));
 	}
+	
+	@Test
+	public void groupNoAdjExamples() {
+		int[] nums = {2, 5, 10, 4};
+		assertTrue(Recursion2.groupNoAdj(0, nums, 12));
+		assertFalse(Recursion2.groupNoAdj(0, nums, 14));
+		assertFalse(Recursion2.groupNoAdj(0, nums, 7));
+	}
+	
+	@Test
+	public void groupSum5Examples() {
+		int[] nums = {2, 5, 10, 4};
+		assertTrue(Recursion2.groupSum5(0, nums, 19));
+		assertTrue(Recursion2.groupSum5(0, nums, 17));
+		assertFalse(Recursion2.groupSum5(0, nums, 12));
+		
+		int[] nums2 = {2, 10, 1};
+		assertFalse(Recursion2.groupSum5(0, nums2, 11));
+	}
 
 }
